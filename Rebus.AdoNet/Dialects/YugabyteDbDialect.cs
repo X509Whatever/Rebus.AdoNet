@@ -39,7 +39,7 @@ namespace Rebus.AdoNet.Dialects
 			var versionString = Convert.ToString(result);
 			return versionString.Split('-').First();
 		}
-		
+
 		public override bool IsSelectForNoWaitLockingException(DbException ex)
 		{
 			if (ex != null && _postgresExceptionNames.Contains(ex.GetType().Name))
